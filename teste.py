@@ -18,4 +18,3 @@ with open('pontos.txt', 'a') as arquivo:
     pripontos = arquivo.write(str(pontosA))
 with open('pontos.txt', 'a') as arquivo:
     segpontos = arquivo.write(f'\n{str(pontosB)}')
-    

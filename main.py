@@ -10,7 +10,22 @@ pontos = perdeu = partidas = empate= 0
 pontos_lista = list()
 
 funcoes.formatacao('Pedra  Papel Tesoura')
-nome = input('Por favor digite o seu nome: ')
+print('Novo jogo[1] ')
+print('Continuar jogando[2]')
+print('sair[3]')
+while True:
+    opcao = input('Opção: ')
+    if opcao == '1':
+        nome = input('Por favor digite o seu nome: ')
+    elif opcao == '2':
+        pass
+    elif opcao == '3':
+        break
+    else:
+        print('ERRO! digite uma opção valida!')
+
+if opcao == '3':
+    exit()
 
 while True:
     while True:
@@ -77,7 +92,7 @@ while True:
         break
     
     os.system('clear') or None
-
+con
 os.system('clear') or None
 # Placar de pontuação
 funcoes.formatacao('Placar de pontuação')
@@ -87,6 +102,7 @@ print(f'O jogador perdeu {perdeu} vezes')
 print(f'O jogador empatou {empate} vezes')
 print(f'O jogador jogou {partidas} vezes')
 
+       
 # Adicionando pontos a lista
 pontos_lista.append(pontos)
 pontos_lista.append(perdeu)
@@ -97,7 +113,6 @@ pontos_lista.append(partidas)
 with open('nome.txt', 'a') as arquivon:
     nomearq = arquivon.write(nome)
 
-# Adicionando a pontação do jogador no arquivo
+# Adicionando pontos do jogaodr no arquivo
 with open('pontos.txt', 'a') as arquivop:
-    pontosarq = arquivop.write(str(pontos_lista))
-    
+    pontosarq = arquivop.write(pontos_lista)
