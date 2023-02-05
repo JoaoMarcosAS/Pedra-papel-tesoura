@@ -2,6 +2,8 @@
 import funcoes
 import os
 from random import randint
+from time import sleep
+from pynput.keyboard import Key, Listener
 
 os.system('clear') or None
 jogadas = ['', 'Pedra', 'Papel' , 'Tesoura']
@@ -24,8 +26,15 @@ while True:
 
     maquinaesco = jogadas[maquina]
     jogadoresco = jogadas[jogador]
+    
+    print('Pedra...', flush=True,end='  ')
+    sleep(0.5)
+    print('Papel...', flush=True, end='  ')
+    sleep(0.5)
+    print('Tesoura...', flush=True)
+    sleep(0.5)
 
-    print(f'O jogado escolheu {jogadoresco} e a maquinha escolheu {maquinaesco}.')
+    print(f'O jogador escolheu {jogadoresco} e a maquinha escolheu {maquinaesco}.')
     print('O jogador', end=' ')
 
     # sistema de pontuação
@@ -45,10 +54,14 @@ while True:
         print('Perdeu!')
         perdeu += 1
     partidas += 1
-    os.system('clear') or None
+    
+    print('Pressione ENTER para continuar!')
+    with Listener(on_press = funcoes.pressione_enter) as listener:
+        listener.join()
 
     while True:
         try:
+            os.system('clear') or None
             continuar = input('Quer continuar? [S/N] ')
             if continuar[0].strip().upper() not in 'SN':
                 print('ERRO! digite uma opção valida!')
