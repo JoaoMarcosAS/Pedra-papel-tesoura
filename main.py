@@ -1,9 +1,8 @@
-
 import funcoes
 import os
 from random import randint
 from time import sleep
-from pynput.keyboard import Key, Listener
+from pynput.keyboard import Listener
 
 os.system('clear') or None
 jogadas = ['', 'Pedra', 'Papel' , 'Tesoura']
@@ -80,9 +79,25 @@ while True:
     os.system('clear') or None
 
 os.system('clear') or None
-
+# Placar de pontuação
 funcoes.formatacao('Placar de pontuação')
+
 print(f'O jogador conseguiu {pontos} pontos')
 print(f'O jogador perdeu {perdeu} vezes')
 print(f'O jogador empatou {empate} vezes')
 print(f'O jogador jogou {partidas} vezes')
+
+# Adicionando pontos a lista
+pontos_lista.append(pontos)
+pontos_lista.append(perdeu)
+pontos_lista.append(empate)
+pontos_lista.append(partidas)
+
+# Adicionando o nome do jogador no arquivo
+with open('nome.txt', 'a') as arquivon:
+    nomearq = arquivon.write(nome)
+
+# Adicionando a pontação do jogador no arquivo
+with open('pontos.txt', 'a') as arquivop:
+    pontosarq = arquivop.write(str(pontos_lista))
+    

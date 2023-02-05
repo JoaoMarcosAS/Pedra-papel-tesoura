@@ -1,4 +1,5 @@
 from pynput.keyboard import Key, Listener
+
 import os
 
 def formatacao(formatar):
