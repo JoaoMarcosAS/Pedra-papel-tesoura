@@ -39,10 +39,10 @@ while True:
 
     # sistema de pontuação
     if jogador == maquina: 
-        print('Empate!')
+        print('Empatol!')
         empate += 1
     elif jogador == 2 and maquina == 1:
-        print('Ganhou, Ponto!')
+        print('Ganhou, Pon == 1 or jogador == 2 or jogador == 3to!')
         pontos +=1
     elif jogador == 1 and maquina == 3:
         print('Ganhou, Ponto!')
@@ -63,7 +63,7 @@ while True:
         try:
             os.system('clear') or None
             continuar = input('Quer continuar? [S/N] ')
-            if continuar[0].strip().upper() not in 'SN':
+            if continuar[0].strip().upper() not in 'SN' or continuar in '1234567890':
                 print('ERRO! digite uma opção valida!')
             else:
                 break
