@@ -8,12 +8,15 @@ from pynput.keyboard import Key, Listener
 os.system('clear') or None
 jogadas = ['', 'Pedra', 'Papel' , 'Tesoura']
 pontos = perdeu = partidas = empate= 0
+pontos_lista = list()
 
-# escolha do jogador
+funcoes.formatacao('Pedra  Papel Tesoura')
+nome = input('Por favor digite o seu nome: ')
+
 while True:
     while True:
         funcoes.formatacao('Pedra[1]  Papel[2]  Tesoura[3]')
-        
+
         try:
             jogador = int(input('Escolha: '))
             if jogador == 1 or jogador == 2 or jogador == 3:
