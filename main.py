@@ -92,7 +92,7 @@ while True:
         break
     
     os.system('clear') or None
-con
+
 os.system('clear') or None
 # Placar de pontuação
 funcoes.formatacao('Placar de pontuação')
