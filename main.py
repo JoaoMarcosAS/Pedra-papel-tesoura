@@ -1,6 +1,9 @@
+
 import funcoes
+import os
 from random import randint
 
+os.system('clear') or None
 jogadas = ['', 'Pedra', 'Papel' , 'Tesoura']
 pontos = perdeu = partidas = empate= 0
 
@@ -13,11 +16,10 @@ while True:
             jogador = int(input('Escolha: '))
             if jogador == 1 or jogador == 2 or jogador == 3:
                 break
-            else:
-                print('ERRO! digite uma opção valida!')
         except:
+            os.system('clear') or None
             print('ERRO! digite uma opção valida!')
-
+             
     maquina = randint(1, 3)
 
     maquinaesco = jogadas[maquina]
@@ -43,19 +45,25 @@ while True:
         print('Perdeu!')
         perdeu += 1
     partidas += 1
-    
+    os.system('clear') or None
+
     while True:
         try:
-                continuar = input('Quer continuar? [S/N] ')
-                if continuar[0].strip().upper() not in 'SN':
-                    print('ERRO! digite uma opção valida!')
-                else:
-                    break
+            continuar = input('Quer continuar? [S/N] ')
+            if continuar[0].strip().upper() not in 'SN':
+                print('ERRO! digite uma opção valida!')
+            else:
+                break
         except:
+            os.system('clear') or None
             print('ERRO! digite a opção valida!')
 
     if continuar[0].strip().upper() == 'N':
         break
+    
+    os.system('clear') or None
+
+os.system('clear') or None
 
 funcoes.formatacao('Placar de pontuação')
 print(f'O jogador conseguiu {pontos} pontos')
