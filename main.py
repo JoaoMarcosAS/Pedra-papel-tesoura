@@ -17,6 +17,7 @@ while True:
     opcao = input('Opção: ')
     if opcao == '1':
         nome = input('Por favor digite o seu nome: ')
+        break
     elif opcao == '2':
         pass
     elif opcao == '3':
@@ -104,10 +105,6 @@ print(f'O jogador jogou {partidas} vezes')
 
        
 # Adicionando pontos a lista
-pontos_lista.append(pontos)
-pontos_lista.append(perdeu)
-pontos_lista.append(empate)
-pontos_lista.append(partidas)
 
 # Adicionando o nome do jogador no arquivo
 with open('nome.txt', 'a') as arquivon:
@@ -115,4 +112,13 @@ with open('nome.txt', 'a') as arquivon:
 
 # Adicionando pontos do jogaodr no arquivo
 with open('pontos.txt', 'a') as arquivop:
-    pontosarq = arquivop.write(pontos_lista)
+    pontosarq = arquivop.write(str(pontos))
+
+with open('pontos.txt', 'a') as arquivop:
+    pontosarq = arquivop.write(str(perdeu))
+
+with open('pontos.txt', 'a') as arquivop:
+    pontosarq = arquivop.write(str(empate))
+
+with open('pontos.txt', 'a') as arquivop:
+    pontosarq = arquivop.write(str(partidas))
