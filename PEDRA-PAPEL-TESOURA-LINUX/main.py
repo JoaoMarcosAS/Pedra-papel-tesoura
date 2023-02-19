@@ -6,23 +6,7 @@ from pynput.keyboard import Listener
 
 os.system('clear') or None
 jogadas = ['', 'Pedra', 'Papel' , 'Tesoura']
-pontos = perdeu = partidas = empate= 0
-pontos_lista = list()
-
-while True:
-    opcao = input('Opção: ')
-    if opcao == '1':
-        nome = input('Por favor digite o seu nome: ')
-        break
-    elif opcao == '2':
-        pass
-    elif opcao == '3':
-        break
-    else:
-        print('ERRO! digite uma opção valida!')
-
-if opcao == '3':
-    exit()
+pontos = perdeu = partidas = empate = 0
 
 while True:
     while True:
