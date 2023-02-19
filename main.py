@@ -9,10 +9,6 @@ jogadas = ['', 'Pedra', 'Papel' , 'Tesoura']
 pontos = perdeu = partidas = empate= 0
 pontos_lista = list()
 
-funcoes.formatacao('Pedra  Papel Tesoura')
-print('Novo jogo[1] ')
-print('Continuar jogando[2]')
-print('sair[3]')
 while True:
     opcao = input('Opção: ')
     if opcao == '1':
@@ -102,23 +98,4 @@ print(f'O jogador conseguiu {pontos} pontos')
 print(f'O jogador perdeu {perdeu} vezes')
 print(f'O jogador empatou {empate} vezes')
 print(f'O jogador jogou {partidas} vezes')
-
-       
-# Adicionando pontos a lista
-
-# Adicionando o nome do jogador no arquivo
-with open('nome.txt', 'a') as arquivon:
-    nomearq = arquivon.write(nome)
-
-# Adicionando pontos do jogaodr no arquivo
-with open('pontos.txt', 'a') as arquivop:
-    pontosarq = arquivop.write(str(pontos))
-
-with open('pontos.txt', 'a') as arquivop:
-    pontosarq = arquivop.write(str(perdeu))
-
-with open('pontos.txt', 'a') as arquivop:
-    pontosarq = arquivop.write(str(empate))
-
-with open('pontos.txt', 'a') as arquivop:
-    pontosarq = arquivop.write(str(partidas))
+     
