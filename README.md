@@ -1,7 +1,7 @@
 # Pedra papel tesoura
 jogo de pedra papel desoura em python com interface CLI
 
-### O que foi adquirido de conhecimento com este projeto para o úsario @JoaoMarcosAS ?
+### O que foi adquirido de conhecimento com este projeto para o úsario [JoaoMarcosAS](https://github.com/JoaoMarcosAS)?
 
 * **Pequeno conhecimento da biblioteca ```os``` da linguagem de progromação python:**
     
